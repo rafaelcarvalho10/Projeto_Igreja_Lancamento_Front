@@ -1,0 +1,29 @@
+table {
+  width: 100%;
+}
+
+.edit {
+  margin-right: 10px;
+}
+
+.edit > i {
+  color: #d9cd26;
+}
+
+.delete {
+  margin-right: 10px;
+}
+
+.delete > i {
+  color: #e35e6b;
+}
+
+.info > i {
+  color:darkorange;
+}
+
+
+.id {
+  display: none;
+}
+

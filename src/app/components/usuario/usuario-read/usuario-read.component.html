@@ -1,0 +1,53 @@
+<div class="elevation-z4">
+  <mat-form-field>
+    <input matInput placeholder="Filtro de Pesquisa" appearance="outline">
+  </mat-form-field>
+  <table mat-table [dataSource]='usuarios'>
+    <!-- ID column -->
+    <ng-container matColumnDef="id">
+      <th class="id" mat-header-cell *matHeaderCellDef>Id</th>
+      <td class="id" mat-cell *matCellDef="let row">{{row.id}}</td>
+    </ng-container>
+
+    <!-- Cod_igreja column -->
+    <ng-container matColumnDef="username">
+      <th mat-header-cell *matHeaderCellDef>Usuário</th>
+      <td mat-cell *matCellDef="let row">{{row.username}}</td>
+    </ng-container>
+
+    <!-- Cod_igreja column -->
+    <ng-container matColumnDef="role">
+      <th mat-header-cell *matHeaderCellDef>Role</th>
+      <td mat-cell *matCellDef="let row">{{row.role}}</td>
+    </ng-container>
+
+    <!-- Nome_Igreja column
+    <ng-container matColumnDef="nome_igreja">
+      <th mat-header-cell *matHeaderCellDef>Nome do Usuario</th>
+      <td mat-cell *matCellDef="let row">{{row.password}}</td>
+    </ng-container> -->
+
+     <!-- Action Column -->
+     <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef >Ações</th>
+      <td mat-cell *matCellDef="let row">
+        <a routerLink="/usuarios/update/{{row.id}}" class="edit">
+          <i class="material-icons">
+            edit
+          </i>
+        </a>
+        <a routerLink="/usuarios/delete/{{row.id}}" class="delete">
+          <i class="material-icons">
+            delete
+          </i>
+        </a>
+
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  </table>
+
+</div>

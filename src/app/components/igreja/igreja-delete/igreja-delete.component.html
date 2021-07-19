@@ -1,0 +1,31 @@
+<mat-card>
+  <mat-card-title>Excluir Igreja</mat-card-title>
+
+  <form [formGroup]="igrejaForm" (ngSubmit)="deleteIgreja()" class="form" #form="ngForm">
+    <!-- <input type="hidden" formControleNome="id"> -->
+    <mat-form-field>
+      <input matInput placeholder="id" appearance="outline"
+                                                      formControlName="id">
+    </mat-form-field >
+    <mat-form-field>
+      <input matInput placeholder="codigo da igreja" appearance="outline"
+                                                      formControlName="cod_igreja">
+    </mat-form-field >
+    <mat-form-field class="form">
+      <input matInput placeholder="nome da igreja" appearance="outline"
+                                                    formControlName="nome_igreja">
+    </mat-form-field>
+  </form>
+
+  <h1>Ao excluir a igreja, todas as atividades (lançamentos) realizadas na mesma, também serão excluídas</h1>
+
+
+  <button mat-raised-button (click)="deleteIgreja()" color="warn">
+    Excluir
+  </button>
+
+  <button mat-raised-button (click)="cancel()" color="red">
+    Cancelar
+  </button>
+</mat-card>
+<samp></samp>

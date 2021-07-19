@@ -1,0 +1,85 @@
+table {
+  width: 100%;
+}
+
+.edit {
+  margin-right: 10px;
+}
+
+.edit > i {
+  color: #d9cd26;
+}
+
+.delete > i {
+  color: #e35e6b;
+}
+
+.delete {
+  margin-right: 10px;
+}
+
+.info > i {
+  color:darkorange;
+}
+
+.filtro {
+  display: flex;
+  flex-direction: row;
+}
+
+.ate {
+  padding-left: 20px;
+  margin-top: 20px;
+}
+
+ .data {
+  padding-left: 90px;
+}
+
+.data2 {
+  padding-left: 20px;
+}
+
+.excel {
+  padding-left: 190px;
+}
+
+.excelColor{
+  background-color: green;
+}
+
+.pdf {
+  padding-left: 20px;
+}
+
+.pdfColor{
+  background-color:#ff0000;
+}
+
+
+
+.total {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.mat-elevation-z4 {
+  margin-top: 20px;
+}
+
+.qtdD {
+  padding-left: 70px;
+}
+
+.valorD {
+  padding-left: 70px;
+}
+
+.valorO {
+  padding-left: 70px;
+}
+
+.id {
+  display: none;
+}

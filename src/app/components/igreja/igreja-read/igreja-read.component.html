@@ -1,0 +1,54 @@
+<div class="elevation-z4">
+    <mat-form-field>
+      <input  matInput placeholder="Filtro de Pesquisa">
+   </mat-form-field>
+  <table mat-table [dataSource]='igrejas1' matSort>
+    <!-- ID column -->
+    <div>
+      <ng-container matColumnDef="id">
+        <th class="id" mat-header-cell *matHeaderCellDef>Id</th>
+        <td class="id" mat-cell *matCellDef="let row">{{row.id}}</td>
+      </ng-container>
+    </div>
+
+    <!-- Cod_igreja column -->
+    <ng-container matColumnDef="cod_igreja">
+      <th mat-header-cell *matHeaderCellDef>Codigo da Igreja</th>
+      <td mat-cell *matCellDef="let row">{{row.cod_igreja}}</td>
+    </ng-container>
+
+    <!-- Nome_Igreja column -->
+    <ng-container matColumnDef="nome_igreja">
+      <th mat-header-cell *matHeaderCellDef>Nome da Igreja</th>
+      <td mat-cell *matCellDef="let row">{{row.nome_igreja}}</td>
+    </ng-container>
+
+     <!-- Action Column -->
+     <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef >Ações</th>
+      <td mat-cell *matCellDef="let row">
+        <a routerLink="/igrejas/update/{{row.id}}" class="edit">
+          <i class="material-icons">
+            edit
+          </i>
+        </a>
+        <a routerLink="/igrejas/delete/{{row.id}}" class="delete">
+          <i class="material-icons">
+            delete
+          </i>
+        </a>
+        <a routerLink="/igrejas/delete/{{row.id}}" class="info">
+          <i class="material-icons">
+            info
+
+          </i>
+        </a>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  </table>
+
+</div>

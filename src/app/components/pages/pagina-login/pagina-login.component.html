@@ -1,0 +1,28 @@
+<!-- <app-login></app-login> -->
+
+<div class="card">
+  <p class="text-center">
+    <img src="assets/img/icon.png" width="200" alt="DoTo">
+  </p>
+
+  <form [formGroup]="form" class="form" (keydown.enter)="doLogin()" (ngSubmit)="doLogin()">
+    <p class='text-center'>
+        <mat-form-field appearance="legacy">
+          <mat-label>Usuario</mat-label>
+          <input matInput formControlName="username" required/>
+        </mat-form-field>
+
+        <mat-form-field appearance="legacy">
+          <mat-label>Senha</mat-label>
+          <input matInput formControlName="password" required/>
+        </mat-form-field>
+    </p>
+  </form>
+
+  <br>
+  <p class="text-center">
+     <button type="submit" (click)="doLogin()" class="entrar" mat-raised-button [disabled]="!form.valid" color="primary">
+        Entrar
+     </button>
+  </p>
+</div>

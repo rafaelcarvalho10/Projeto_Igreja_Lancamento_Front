@@ -1,0 +1,36 @@
+
+
+/* .container {
+  width: 980px;
+  background-color: #fff;
+  background-image: url("/assets/img/icon.png");
+  background-repeat: no-repeat;
+  background-position-x: -100px;
+  background-position-y: -100px;
+  box-shadow: 2px 2px 5px rgba(0, 0 ,0 , 0.2)
+}
+
+.inner-container {
+  margin: 25px;
+} */
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 2px 2px 5px rgba(0, 0 ,0 , 0.2);
+  border-radius: 5px;
+  min-width: 350px;
+  min-height: 200px;
+  padding: 20px;
+  margin-top: 100px;
+  margin-right: 500px;
+  margin-left: 500px;
+}
+

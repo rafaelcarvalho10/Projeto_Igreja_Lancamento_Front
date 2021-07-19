@@ -1,0 +1,41 @@
+<mat-card>
+  <mat-card-title>Atualizar Usuario</mat-card-title>
+  <form [formGroup]="usuarioForm" (ngSubmit)="save()" class="form" #form="ngForm"  >
+    <mat-form-field class="id">
+      <input matInput placeholder="id" appearance="outline"
+                                         formControlName="id">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Usuario"
+                                         formControlName="username">
+    </mat-form-field>
+    <mat-form-field class="form">
+      <input matInput placeholder="Password" appearance="outline"
+                                         formControlName="password">
+    </mat-form-field>
+    <mat-form-field class="form">
+      <input matInput placeholder="Gerente ou Funcionário" appearance="outline"
+                                         formControlName="role">
+    </mat-form-field>
+  </form>
+
+  <mat-card class="card">
+    <h2>Igrejas que o Usuário terá acesso</h2>
+    <!-- <div dir="ltr" fxLayoutGap="20px"> -->
+    <div fxLayout="column" class="colum">
+      <section class="example-section" formControlName="igrejaId">
+       <mat-checkbox class="example-margin" (change)="onChange(h.id, $event.checked)" *ngFor="let h of igrejas" [value]="h.id">{{h.nome_igreja}}</mat-checkbox>
+     </section>
+    </div>
+  </mat-card>
+
+
+  <button mat-raised-button (click)="save()" color="primary">
+    Salvar
+  </button>
+
+  <button mat-raised-button (click)="cancel()" color="red">
+    Cancelar
+  </button>
+</mat-card>
+<samp></samp>

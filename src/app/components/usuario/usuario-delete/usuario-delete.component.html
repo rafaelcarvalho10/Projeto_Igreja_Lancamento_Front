@@ -1,0 +1,31 @@
+<mat-card>
+  <mat-card-title>Novo Usuario</mat-card-title>
+  <form [formGroup]="usuarioForm" (ngSubmit)="deleteUsuario()" class="form" #form="ngForm">
+    <mat-form-field>
+      <input matInput placeholder="id" appearance="outline"
+                                         formControlName="id">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Usuario" appearance="outline"
+                                         formControlName="username">
+    </mat-form-field>
+    <mat-form-field class="form">
+      <input matInput placeholder="Password" appearance="outline"
+                                         formControlName="password">
+    </mat-form-field>
+    <mat-form-field class="form">
+      <input matInput placeholder="role" appearance="outline"
+                                         formControlName="role">
+    </mat-form-field>
+  </form>
+
+
+  <button mat-raised-button (click)="deleteUsuario()" color="warn">
+    Excluir
+  </button>
+
+  <button mat-raised-button (click)="cancel()" color="red">
+    Cancelar
+  </button>
+</mat-card>
+<samp></samp>

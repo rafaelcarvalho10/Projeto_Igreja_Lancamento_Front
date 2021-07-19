@@ -1,0 +1,48 @@
+<mat-card>
+  <mat-card-title>Atualizar Lançamentos</mat-card-title>
+
+  <form [formGroup]="lancamentoForm" (ngSubmit)="save()" class="form" #form="ngForm">
+    <mat-form-field class="form" class="id">
+      <input matInput placeholder="id" appearance="outline"
+                                          formControlName="id">
+    </mat-form-field>
+    <mat-form-field class="form">
+      <input matInput placeholder="codigo do lançamento" appearance="outline"
+                                            formControlName="cod_lancamento">
+    </mat-form-field>
+    <mat-form-field class="form">
+      <input matInput placeholder="Data do Lançamento" appearance="outline" type="string"
+                                          formControlName="data_Lancamento" >
+    </mat-form-field>
+    <mat-form-field class="form">
+      <input matInput placeholder="Quantidade de pessoas" appearance="outline" type="number"
+                                                formControlName="qtd_pessoas">
+    </mat-form-field>
+    <mat-form-field class="form">
+      <input matInput placeholder="Valor da oferta" appearance="outline" type="number"
+                                             formControlName="vl_oferta">
+    </mat-form-field>
+    <mat-form-field class="form">
+      <input matInput placeholder="Quantidade de dizimistas" appearance="outline" type="number"
+                                              formControlName="qtd_dizimistas">
+    </mat-form-field>
+    <mat-form-field class="form">
+      <input matInput placeholder="Valor total dos dizimos" appearance="outline" type="number"
+                                           formControlName="vl_total_dizimos">
+    </mat-form-field>
+     <mat-form-field class="form">
+      <input matInput placeholder="Igreja" appearance="outline" type="number"
+                                      formControlName="igrejaId">
+    </mat-form-field >
+  </form>
+
+
+  <button mat-raised-button (click)="save()" color="primary">
+    Atualizar
+  </button>
+
+  <button mat-raised-button (click)="cancel()" color="red">
+    Cancelar
+  </button>
+</mat-card>
+

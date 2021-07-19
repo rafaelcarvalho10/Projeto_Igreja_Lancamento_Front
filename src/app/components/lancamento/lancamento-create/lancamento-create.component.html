@@ -1,0 +1,51 @@
+<mat-card>
+  <mat-card-title>Novo Lançamento</mat-card-title>
+  <form [formGroup]="lancamentoForm" (ngSubmit)="save()" class="form" #form="ngForm">
+    <mat-form-field >
+      <input matInput placeholder="codigo do lançamento" appearance="outline"
+                                             formControlName="cod_lancamento">
+    </mat-form-field>
+    <mat-form-field >
+      <input matInput placeholder="Data do Lançamento" appearance="outline" type="date"
+                                             formControlName="data_Lancamento">
+    </mat-form-field>
+    <mat-form-field >
+      <input matInput placeholder="Quantidade de pessoas" appearance="outline" type="number"
+                                                  formControlName="qtd_pessoas">
+    </mat-form-field>
+    <mat-form-field >
+      <input matInput placeholder="Valor da oferta" appearance="outline" type="number"
+                                               formControlName="vl_oferta">
+    </mat-form-field>
+    <mat-form-field >
+      <input matInput placeholder="Quantidade de dizimistas" appearance="outline" type="number"
+                                                  formControlName="qtd_dizimistas">
+    </mat-form-field>
+    <mat-form-field >
+      <input matInput placeholder="Valor total dos dizimos" appearance="outline"  type="number"
+                                                 formControlName="vl_total_dizimos">
+    </mat-form-field>
+    <div class="row">
+      <mat-form-field appearance="fill">
+        <mat-label>Igreja</mat-label>
+        <mat-select formControlName="igrejaId">
+          <mat-option *ngFor="let h of igrejas" [value]="h.id">
+            {{ h.nome_igreja }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+     <!-- <mat-form-field >
+      <input matInput placeholder="Igreja" appearance="outline"  type="number"
+                                    formControlName="igrejaId">
+    </mat-form-field > -->
+  </form>
+
+  <button mat-raised-button (click)="save()" color="primary">
+    Salvar
+  </button>
+  <button mat-raised-button (click)="cancel()" color="red">
+    Cancelar
+  </button>
+</mat-card>
+
